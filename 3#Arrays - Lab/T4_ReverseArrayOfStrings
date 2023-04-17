@@ -1,0 +1,26 @@
+package Lab.Arrays;
+
+import java.util.Scanner;
+
+public class T4_ReverseArrayOfStrings {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        // 1. Прочитане на един текстов масив от конзолата.
+        String[] symbolArr = scanner.nextLine().split(" ");
+
+        // 2. Обхождане на всички символи от масива.
+        for (int i = 0; i < symbolArr.length / 2; i++) {
+
+            String oldSymbol = symbolArr[i]; // -> Променлива в която запазваме символа на текущия индекс (i).
+
+            symbolArr[i] = symbolArr[symbolArr.length - 1 - i]; // -> Замествоне на символа от текуща последна позиция на нулев индекс.
+
+            symbolArr[symbolArr.length - 1 - i] = oldSymbol; // -> Заместване на последния индекс с предварително запазения символ на позиция 0.
+        }
+
+        // 3. Принтиране на крайния резултат под формата на текст.
+        System.out.println(String.join(" ", symbolArr));
+    }
+}
