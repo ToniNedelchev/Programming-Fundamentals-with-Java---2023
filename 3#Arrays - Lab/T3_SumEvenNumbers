@@ -1,0 +1,29 @@
+package Lab.Arrays;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class T3_SumEvenNumbers {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        // 1. Прочитане на един целочислен масив.
+        int[] numbersArr = Arrays.stream(scanner.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
+
+        int sumEvenNumber = 0; // -> Променлива в който съхранявам сумата на числата.
+
+        // 2. Обхождане на всички числа от масива.
+        for (int i = 0; i < numbersArr.length; i++) {
+
+            int currentNumber = numbersArr[i]; // -> Взимане на текущото число.
+
+            // 3. Проверка дали текущото число е четно.
+            if (currentNumber % 2 == 0) {
+                sumEvenNumber += currentNumber; // -> Добавяне на текущото число към общата сума.
+            }
+        }
+
+        System.out.println(sumEvenNumber); // -> Принтиране на общата сума.
+    }
+}
