@@ -30,8 +30,8 @@ public class T5_EvenAndOddSubtraction {
             }
         }
 
-        int totalSum = sumEven - sumOdd; // -> Получаване на на разликата между двете суми.
+        int difference = sumEven - sumOdd; // -> Получаване на на разликата между двете суми.
 
-        System.out.println(totalSum); // -> Принтиране на общата сума.
+        System.out.println(difference); // -> Принтиране на общата сума.
     }
 }
